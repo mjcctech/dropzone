@@ -1645,10 +1645,10 @@
     };
   }
 
-  if (typeof module !== "undefined" && module !== null) {
-    module.exports = Dropzone;
-  } else {
+  if (typeof window !== "undefined" && window !== null) {
     window.Dropzone = Dropzone;
+  } else if (typeof module !== "undefined" && module !== null) {
+    module.exports = Dropzone;
   }
 
   Dropzone.ADDED = "added";
